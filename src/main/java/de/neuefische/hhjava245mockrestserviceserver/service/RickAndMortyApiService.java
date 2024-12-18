@@ -11,9 +11,8 @@ public class RickAndMortyApiService {
 	private static final String BASE_URL = "https://rickandmortyapi.com/api";
 	private final RestClient restClient;
 
-	public RickAndMortyApiService() {
-		this.restClient = RestClient
-				.builder()
+	public RickAndMortyApiService(RestClient.Builder builder) {
+		this.restClient = builder
 				.baseUrl(BASE_URL)
 				.build();
 	}
